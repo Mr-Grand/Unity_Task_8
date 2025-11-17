@@ -30,6 +30,10 @@ public class CubeBehaviour : MonoBehaviour
     
     private void SetUpCube()
     {
+        Rigidbody rb = gameObject.GetComponent<Rigidbody>();
+        rb.linearVelocity = Vector3.zero;
+        rb.angularVelocity = Vector3.zero;
+        
         Renderer rend = GetComponent<Renderer>();
         rend.material.color = Color.white;
         _isColoreChanged = false;
